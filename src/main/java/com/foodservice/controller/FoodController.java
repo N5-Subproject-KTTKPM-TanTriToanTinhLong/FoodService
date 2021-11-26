@@ -14,7 +14,7 @@ public class FoodController {
     @Autowired
     private FoodService foodService;
 
-    @PostMapping("/")
+    @PostMapping()
     Food save(@RequestBody Food food){
         return foodService.save(food);
     }
@@ -24,7 +24,7 @@ public class FoodController {
         return foodService.findById(id);
     }
 
-    @GetMapping("/")
+    @GetMapping()
     List<Food> findAll(){
         return foodService.findAll();
     }
