@@ -3,6 +3,7 @@ package com.foodservice.controller;
 import com.foodservice.entity.Food;
 import com.foodservice.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class FoodController {
     }
 
     @GetMapping("/{id}")
-    Food findById(@PathVariable("id") Long id){
+    ResponseEntity<Food> findById(@PathVariable("id") Long id){
         return foodService.findById(id);
     }
 
