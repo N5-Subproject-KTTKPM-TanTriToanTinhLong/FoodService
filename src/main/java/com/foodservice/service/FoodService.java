@@ -23,7 +23,7 @@ public class FoodService {
     }
 
     @Retry(name = "basic")
-    @RateLimiter(name = "multiRate", fallbackMethod = "fallBackMethod")
+//    @RateLimiter(name = "multiRate", fallbackMethod = "fallBackMethod")
     public ResponseEntity<Food> findById(long id){
         Food food = foodRepository.findById(id).get();
         return new ResponseEntity<Food>(food, HttpStatus.OK);
