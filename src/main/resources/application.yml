@@ -2,11 +2,11 @@ spring:
   application:
     name: FOOD-SERVICE
 
-#  config:
-#    import: "optional:configserver:"
-#    cloud:
-#      config:
-#        uri: https://n5-subprj-cloudserver.herokuapp.com
+  config:
+    import: "optional:configserver:"
+    cloud:
+      config:
+        uri: https://n5-subprj-cloudserver.herokuapp.com
 
 eureka:
   instance:
