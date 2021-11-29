@@ -6,7 +6,7 @@ spring:
     import: "optional:configserver:"
     cloud:
       config:
-        uri: https://n5-subprj-cloudserver.herokuapp.com/
+        uri: https://n5-subprj-cloudserver.herokuapp.com
 
 eureka:
   instance:
