@@ -6,15 +6,13 @@ spring:
     import: "optional:configserver:"
     cloud:
       config:
-        uri: http://localhost:8888/
+        uri: https://n5-subprj-cloudserver.herokuapp.com/
 
 eureka:
+  instance:
+    hostname: n5-subprj-food.herokuapp.com
+    homePageUrl: https://${eureka.instance.hostName}/
+    home-page-url-path: https://${eureka.instance.hostName}
   client:
-    register-with-eureka:
-      value: true
-    fetch-registry:
-      value: true;
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    instance:
-      hostname: localhost
+    serviceUrl:
+      defaultZone: https://n5-subprj-eurekaserver.herokuapp.com/eureka
