@@ -7,3 +7,10 @@ eureka:
     hostname: n5-subprj-food.herokuapp.com
     homePageUrl: https://${eureka.instance.hostName}/
     home-page-url-path: https://${eureka.instance.hostName}
+
+resilience4j:
+  retry:
+    instances:
+      basic:
+        maxRetryAttempts: 5
+        waitDuration: 8s
